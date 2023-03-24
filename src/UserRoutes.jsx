@@ -20,7 +20,6 @@ export const UserRoutes = () => {
           <Route path="/signup" element={<SignupPage />}></Route>
           <Route path="/login" element={<LoginPage />}></Route>
         </Route>
-        <Route path="/" element={<SignupPage />}></Route>
         <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
     </Suspense>
