@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_phonebook=self.webpackChunkmy_phonebook||[]).push([[280],{7280:function(e,n,t){t.r(n);var o=t(4565),s=t(184);n.default=function(){return(0,s.jsx)("div",{className:"container",children:(0,s.jsx)(o.Z,{style:{textAlign:"center",fontSize:"30px"},children:"The page does not exist. Try to login!"})})}}}]);
+//# sourceMappingURL=280.227c921b.chunk.js.map
