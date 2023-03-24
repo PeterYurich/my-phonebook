@@ -1,6 +1,6 @@
 {
-  "homepage": "https://peteryurich.github.io/pet-phonebook",
-  "name": "phonebook",
+  "homepage": "https://peteryurich.github.io/my-phonebook",
+  "name": "my-phonebook",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
