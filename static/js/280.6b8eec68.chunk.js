@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_phonebook=self.webpackChunkmy_phonebook||[]).push([[280],{7280:function(e,n,o){o.r(n);var s=o(184);n.default=function(){return(0,s.jsx)("div",{className:"container",children:(0,s.jsx)("h1",{children:" The page does not exist"})})}}}]);
+//# sourceMappingURL=280.6b8eec68.chunk.js.map
