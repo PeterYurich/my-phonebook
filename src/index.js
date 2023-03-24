@@ -22,7 +22,7 @@ root.render(
   <Provider store={store}>
     <PersistGate loading={<LoaderBlock/>} persistor={persistor} >
       <BrowserRouter 
-      // basename="my-phonebook"
+      basename="my-phonebook"
       >
         <App />
       </BrowserRouter>

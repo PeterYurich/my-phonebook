@@ -13,7 +13,6 @@ export const UserRoutes = () => {
   return (
     <Suspense fallback={<LoaderBlock></LoaderBlock>}>
       <Routes>
-        <Route path="/my-phonebook" element={<Navigate to="/login" />}></Route>
         <Route path="/" element={<PrivateRoute />}>
           <Route path="/contacts" element={<Phonebook />}></Route>
         </Route>
