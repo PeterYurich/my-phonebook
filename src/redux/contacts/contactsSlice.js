@@ -1,11 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Notify } from "notiflix";
 
 import { fetchContacts, deleteContact, addContact } from "./contactsOperations";
 
-const handleRejected = (state, action) => {
-    state.error = action.payload;
+const handleRejected = (state, { payload }) => {
+    state.error = payload;
     state.items = [];
     state.status = null;
+    if (payload = 'Request failed with status code 409') {
+        Notify.failure("The name exists already! Type another name")
+    }
 };
 
 const contactsSlice = createSlice({
@@ -34,7 +38,7 @@ const contactsSlice = createSlice({
         },
         [deleteContact.fulfilled](state, { payload }) {
             state.error = null;
-            const index = state.items.findIndex(contact => contact.id === payload.id);
+            const index = state.items.findIndex(contact => contact._id === payload._id);
             state.items.splice(index, 1);
             state.status = null;
         },
@@ -47,6 +51,7 @@ const contactsSlice = createSlice({
             state.error = null;
             state.items.push(payload)
             state.status = null;
+            Notify.success(`${payload.name} has added to you phonebook!`);
         },
         [addContact.rejected]: handleRejected,
 

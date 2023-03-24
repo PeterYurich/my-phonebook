@@ -51,10 +51,10 @@ const ContactList = () => {
                   width: '300px',
                 }}
               >
-                {person.name}: {person.number}
+                {person.name}: {person.phone}
               </Typography>
 
-              {contactsStatus === person.id ? (
+              {contactsStatus === person._id ? (
                 <RingLoader size={32} />
               ) : (
                 <IconButton

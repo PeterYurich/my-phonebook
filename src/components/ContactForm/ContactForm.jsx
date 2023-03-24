@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts, selectContactsStatus } from 'redux/selectors';
+import {
+  selectContacts,
+  selectContactsStatus,
+  selectContactsError,
+} from 'redux/selectors';
 import { addContact } from 'redux/contacts/contactsOperations';
 
 import { selectAuth } from 'redux/selectors';
@@ -25,6 +29,7 @@ const ContactForm = () => {
   const [phone, setPhone] = useState('');
   const contacts = useSelector(selectContacts);
   const contactsStatus = useSelector(selectContactsStatus);
+  const error = useSelector(selectContactsError);
 
   const dispatch = useDispatch();
   const authData = useSelector(selectAuth);
@@ -65,7 +70,6 @@ const ContactForm = () => {
     dispatch(addContact({ name, phone }));
     setName('');
     setPhone('');
-    Notify.success(`${name} has added to you phonebook!`);
   };
   const theme = createTheme();
 
@@ -125,9 +129,9 @@ const ContactForm = () => {
             >
               {contactsStatus === 'adding' ? (
                 // <div>
-                  <Blocks height={25} />
-                // </div>
+                <Blocks height={25} />
               ) : (
+                // </div>
                 'save'
               )}
             </Button>
